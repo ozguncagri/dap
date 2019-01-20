@@ -3,30 +3,30 @@ MAINTAINER Özgün Çağrı AYDIN <ozguncagri@gmail.com>
 
 # Install Apache 2, PHP 7 and some modules for development
 RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-get -y install \
+    unzip \
     apache2 \
-    php7.0 \
-    libapache2-mod-php7.0 \
+    php7.2 \
+    libapache2-mod-php7.2 \
     curl \
-    php7.0-mysql \
-    php7.0-pgsql \
-    php7.0-sqlite3 \
-    php7.0-mbstring \
-    php7.0-curl \
-    php7.0-mcrypt \
-    php7.0-bz2 \
-    php7.0-gd \
-    php7.0-bcmath \
-    php7.0-xml \
-    php7.0-zip \
+    php7.2-mysql \
+    php7.2-pgsql \
+    php7.2-sqlite3 \
+    php7.2-mbstring \
+    php7.2-curl \
+    php7.2-bz2 \
+    php7.2-gd \
+    php7.2-bcmath \
+    php7.2-xml \
+    php7.2-zip \
     php-redis \
     php-mongodb \
     php-imagick
 
 
 # Enable apache mods.
-RUN a2enmod php7.0
+RUN a2enmod php7.2
 RUN a2enmod rewrite
- 
+
 # Suppress FQDN message
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
