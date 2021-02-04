@@ -12,7 +12,7 @@ docker build -t dap .
 
 ## Installed PHP extensions:
 
-Container runs latest PHP 7.2 with these PHP extensions;
+Container runs PHP 7.4 with these PHP extensions;
 
 - Redis
 - MongoDB
@@ -23,7 +23,7 @@ Container runs latest PHP 7.2 with these PHP extensions;
 - Curl
 - Bzip2
 - Image Processing (GD and ImageMagick)
-- BC Match 
+- BC Match
 - XML (SimpleXML, DOM, etc..)
 - Zip
 

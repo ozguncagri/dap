@@ -1,30 +1,29 @@
 FROM ubuntu:latest
-MAINTAINER Özgün Çağrı AYDIN <ozguncagri@gmail.com>
 
 # Install Apache 2, PHP 7 and some modules for development
 RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-get -y install \
     unzip \
     apache2 \
-    php7.2 \
-    libapache2-mod-php7.2 \
+    php7.4 \
+    libapache2-mod-php7.4 \
     curl \
-    php7.2-mysql \
-    php7.2-pgsql \
-    php7.2-sqlite3 \
-    php7.2-mbstring \
-    php7.2-curl \
-    php7.2-bz2 \
-    php7.2-gd \
-    php7.2-bcmath \
-    php7.2-xml \
-    php7.2-zip \
+    php7.4-mysql \
+    php7.4-pgsql \
+    php7.4-sqlite3 \
+    php7.4-mbstring \
+    php7.4-curl \
+    php7.4-bz2 \
+    php7.4-gd \
+    php7.4-bcmath \
+    php7.4-xml \
+    php7.4-zip \
     php-redis \
     php-mongodb \
     php-imagick
 
 
 # Enable apache mods.
-RUN a2enmod php7.2
+RUN a2enmod php7.4
 RUN a2enmod rewrite
 
 # Suppress FQDN message
