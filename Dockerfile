@@ -25,6 +25,7 @@ RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-g
 # Enable apache mods.
 RUN a2enmod php7.4
 RUN a2enmod rewrite
+RUN a2enmod headers
 
 # Suppress FQDN message
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
